@@ -11,7 +11,15 @@
 .field {
     padding: 5px;
     margin: 1px 1px;
-    background-color: #ccc;
+    background-color: #42f24a;
+}
+
+.wall {
+    background-color: #800000;
+}
+
+.road {
+    background-color: #e60000;
 }
 </style>
 
@@ -19,7 +27,10 @@
 {% for row in board %}
     <div class="row">
     {% for field in row %}
-        <div class="field"></div>
+        <div class="field
+            {% if field == 'w'%}wall{% endif %}
+            {% if field != ' ' and field != 'w' %}road{% endif %}
+            "></div>
     {% endfor %}
     </div>
 {% endfor %}
