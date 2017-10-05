@@ -1,5 +1,5 @@
 <style>
-.game {
+.board {
   display: grid;
 }
 
@@ -15,8 +15,8 @@
 }
 </style>
 
-<div class="game">
-{% for row in pole %}
+<div class="board">
+{% for row in game %}
     <div class="row">
     {% for field in row %}
         <div class="field"></div>
