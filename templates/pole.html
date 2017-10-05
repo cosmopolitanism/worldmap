@@ -1,4 +1,26 @@
-<pre>
-{% for line in pole %}{% for symbol in line %}{{ symbol|safe }}{% endfor %}
+<style>
+.game {
+  display: grid;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field {
+    padding: 5px;
+    margin: 1px 1px;
+    background-color: #ccc;
+}
+</style>
+
+<div class="game">
+{% for row in pole %}
+    <div class="row">
+    {% for field in row %}
+        <div class="field"></div>
+    {% endfor %}
+    </div>
 {% endfor %}
-</pre>
+</div>
