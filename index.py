@@ -19,7 +19,7 @@ def index():
     context = {
         'board': board,
     }
-    return render_template('pole.html', **context)
+    return render_template('board.html', **context)
 
 
 if __name__ == '__main__':
