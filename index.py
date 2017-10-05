@@ -9,8 +9,13 @@ app = Flask('index')
 def index():
     board = list()
     with open('pole.txt', 'r') as f:
+        i = 0
         for line in f:
-            board.append('X' * len(line.strip()))
+            board.append(list())
+            for el in line.strip():
+                board[i].append(el)
+            i += 1
+
     context = {
         'board': board,
     }
